@@ -213,7 +213,7 @@ text-align: center;
 }
 
 .card {
-  flex: 1 1 45%;
+  flex: 0 0 35%;
   padding: 20px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.1);
   box-sizing: border-box;
@@ -236,19 +236,15 @@ text-align: center;
 }
 
 /* Mockup notebook e celular */
-.mockup {
+.imagensCard {
   width: 62%;
 }
-
-.mockup .device {
-  width: 20rem;
+.imagem {
+  width: 100%;
 
 }
-
-
 .card h5{
-
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 .card p{
@@ -260,6 +256,7 @@ text-align: center;
 justify-content: center;
 }
 .tecUsadas img{
+  height: 2.5rem;
   width: 2.4rem;
 }
 /* BOTAO NET */

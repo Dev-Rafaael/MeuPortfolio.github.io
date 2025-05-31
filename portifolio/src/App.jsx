@@ -90,8 +90,8 @@ function App() {
     {/* Card Projeto */}
     <div className="card" data-aos="fade-right" data-aos-delay="200">
       <article className="cardResponsivo">
-        <div className="mockup">
-          <img src={Apple} className="device" alt="Notebook" />
+        <div className="imagensCard">
+          <img src={Apple} className="imagem" alt="Notebook" />
           </div>
       </article>
       <h5>Apple</h5>
@@ -107,8 +107,8 @@ function App() {
     {/* Card Projeto */}
     <div className="card" data-aos="fade-left" data-aos-delay="200">
       <article className="cardResponsivo">
-        <div className="mockup">
-          <img src={Pizza} className="device" alt="Notebook" />
+        <div className="imagensCard">
+          <img src={Pizza} className="imagem" alt="Notebook" />
            </div>
       </article>
       <h5>La Pizza</h5>
@@ -123,8 +123,8 @@ function App() {
     {/* Card Projeto */}
  <div className="card" data-aos="fade-right" data-aos-delay="200">
       <article className="cardResponsivo">
-        <div className="mockup">
-          <img src={Casa} className="device" alt="Notebook" />
+        <div className="imagensCard">
+          <img src={Casa} className="imagem" alt="Notebook" />
         </div>
 
       </article>
@@ -139,8 +139,8 @@ function App() {
  {/* Card Projeto */}
     <div className="card" data-aos="fade-left" data-aos-delay="200">
       <article className="cardResponsivo">
-        <div className="mockup">
-          <img src={Casa} className="device" alt="Notebook" />
+        <div className="imagensCard">
+          <img src={Casa} className="imagem" alt="Notebook" />
         </div>
 
       </article>
