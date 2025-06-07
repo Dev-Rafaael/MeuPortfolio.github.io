@@ -21,7 +21,12 @@ import sql from './assets/IMG/sql.png';
 import sol from './assets/IMG/sol.png';
 import lua from './assets/IMG/lua.png';
 import typescript from './assets/IMG/typescript.png';
-import videoFile from './assets/videoBackground.mp4';
+// import videoFile from './assets/videoBackground.mp4';
+import quadrado from './assets/quadrados.mp4';
+// import galaxia1 from './assets/galaxia1.mp4';
+// import galaxia2 from './assets/galaxia2.mp4';
+// import galaxia3 from './assets/galaxia3.mp4';
+
 import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -32,17 +37,20 @@ function App() {
 }, []);
   return (
     <>
+<main className="videoSection">
 
-  <main>
-
-          <section className="videoSection">
-      <video autoPlay loop muted playsInline >
-        <source src={videoFile} type="video/mp4" />
+<video autoPlay loop muted playsInline >
+        <source src={quadrado} type="video/mp4" />
         Seu navegador não suporta o elemento de vídeo.
       </video>
       
       <div className= "overlayGradient"></div>
       
+<section className='contentMain'>
+  <section>
+
+      <section >
+  
       <article className="articleVideo">
         <div className="estiloBackground">
           <img src={sol} alt="Claro" /> 
@@ -69,9 +77,33 @@ function App() {
       </article>
       
     </section>
-</main>
+</section>
  
-
+<section className='content'>
+ <section className="sobreMim" id="sobreMim" >   
+   <div class="titleSobreMim" data-aos="fade-right" data-aos-delay="400">
+        <h2>Quem eu sou?</h2>
+        <p>Sou um Desenvolvedor Front-end e Full Stack, especializado na criação de interfaces web, desenvolvimento de sistemas e aplicações modernas. Trabalho com tecnologias como React.js, Laravel (PHP) e MySQL, sempre buscando construir soluções dinâmicas, escaláveis e de alta performance.
+</p>
+    </div> 
+      <article className="contentSobre">
+     
+    <article className="listaSobre" data-aos="fade-right" data-aos-delay="400">
+    <ul className='listaContent'>
+        <li>💻 Desenvolvedor Web com paixão por tecnologia e inovação 🚀</li>
+        <li>📍 Localizado em São Paulo, Brasil 🇧🇷</li>
+        <li>🎓 Graduado em Análise e Desenvolvimento de Sistemas pela Anhanguera Educacional</li>
+        <li>📚 Pós-graduando em Inteligência Artificial e Ciência de Dados pela Universidade Anhembi Morumbi 🤖📊</li>
+        <li>🧠 Participante ativo de diversos cursos de Desenvolvimento Web na plataforma Udemy 💡</li>
+      </ul>
+  <div className="btnSobreMim">
+     <button ><a href="#contato">Leia mais aqui</a></button>
+     </div>
+     </article>
+      <img src={MinhaFoto} data-aos="fade-left" data-aos-delay="400"/>
+  </article>
+ 
+</section>
 <section className="projetos" id="projetos">
   {/* <div className="titleProjetos">
     <h2>Projetos</h2>
@@ -79,13 +111,11 @@ function App() {
   </div> */}
   <div className="title-wrapper" data-aos="fade-right" data-aos-delay="400" >
     <h2>Projetos</h2>
-    <div className="line"></div>
-    
   </div>
 <div className="subtitle" data-aos="fade-left" data-aos-delay="400">
      <p>Uma seleção dos meus melhores trabalhos e projetos recentes</p>
   </div>
-  <div className="content-projetos">
+  <article className="content-projetos">
 
     {/* Card Projeto */}
     <div className="card" data-aos="fade-right" data-aos-delay="200">
@@ -152,13 +182,41 @@ function App() {
       </ul>
       <button><a href="https://dev-rafaael.github.io/DecoreHome.github.io/" target="_blank">Ver Projeto</a></button>
     </div>
-  </div>
+     <div className="card" data-aos="fade-left" data-aos-delay="200">
+      <article className="cardResponsivo">
+        <div className="imagensCard">
+          <img src={Pizza} className="imagem" alt="Notebook" />
+           </div>
+      </article>
+      <h5>La Pizza</h5>
+      <p>Landing Page de uma Pizzaria.</p>
+      <ul className="tecUsadas">
+        <li><img src={html} alt="HTML" /></li>
+        <li><img src={css} alt="CSS" /></li>
+      </ul>
+      <button><a href="https://dev-rafaael.github.io/PizzariaLaPizza.github.io/" target="_blank">Ver Projeto</a></button>
+    </div>
+     <div className="card" data-aos="fade-left" data-aos-delay="200">
+      <article className="cardResponsivo">
+        <div className="imagensCard">
+          <img src={Pizza} className="imagem" alt="Notebook" />
+           </div>
+      </article>
+      <h5>La Pizza</h5>
+      <p>Landing Page de uma Pizzaria.</p>
+      <ul className="tecUsadas">
+        <li><img src={html} alt="HTML" /></li>
+        <li><img src={css} alt="CSS" /></li>
+      </ul>
+      <button><a href="https://dev-rafaael.github.io/PizzariaLaPizza.github.io/" target="_blank">Ver Projeto</a></button>
+    </div>
+  </article>
+  
 </section>
 
 <section class="habilidadesContent" >
    <div class="title-wrapper" data-aos="fade-right" data-aos-delay="400">
       <h2>Habilidades</h2>
-      <div class="line"></div>
     </div>
     <div className="subtitle" data-aos="fade-left" data-aos-delay="400">
      <p>Tecnologias e ferramentas que domino e utilizo nos meus projetos</p>
@@ -192,29 +250,60 @@ function App() {
   </div>
   </article>
 </section>
- <section className="sobreMim" id="sobreMim" >    
-      <article className="contentSobre">
-      <div class="title-wrapperMim" data-aos="fade-right" data-aos-delay="400">
-        <h2><span>#</span>Sobre Mim</h2>
-        <div class="line"></div>
+
+  <section className='contato'>
+    <article className='contentContato'>
+ <div class="title-wrapper" data-aos="fade-right" data-aos-delay="400">
+      <h2>Entre em contato</h2>
+      <div class="line"></div>
     </div>
-    <article className="listaSobre" data-aos="fade-right" data-aos-delay="400">
-    <ul className='listaContent'>
-        <li>💻 Desenvolvedor Web com paixão por tecnologia e inovação 🚀</li>
-        <li>📍 Localizado em São Paulo, Brasil 🇧🇷</li>
-        <li>🎓 Graduado em Análise e Desenvolvimento de Sistemas pela Anhanguera Educacional</li>
-        <li>📚 Pós-graduando em Inteligência Artificial e Ciência de Dados pela Universidade Anhembi Morumbi 🤖📊</li>
-        <li>🧠 Participante ativo de diversos cursos de Desenvolvimento Web na plataforma Udemy 💡</li>
+    <article className='listaMotivos'>
+    <ul>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eos maxime placeat!</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eos maxime placeat!</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eos maxime placeat!</li>
+    </ul>
+    </article>
+    <article className='meioContato'>
+      <ul>
+        <li>Whatsapp: +55 1191665-8824</li>
+        <li>Linkedin:<link rel="stylesheet" href="linkedin.com/in/rafael-moraes-13ba5b258/" /></li>
+         <li>Github: <link rel="stylesheet" href="https://dev-rafaael.github.io/" /></li>
       </ul>
-  <div className="btnSobreMim">
-     <button ><a href="#contato">Leia mais aqui</a></button>
-     </div>
-     </article>
-  </article>
-  <img src={MinhaFoto} data-aos="fade-left" data-aos-delay="400"/>
-</section>
-
-
+      </article>
+    </article>
+    <article className='formularioContato'>
+      <form >
+          <div className="campo">
+             <label htmlFor="">Como Posso te Chamar *</label>
+                <input type="text" placeholder='Digite Seu Nome' />           
+          </div>
+           <div className="campo">
+             <label htmlFor=""> Seu Melhor Email *</label>
+              <input type="email"  placeholder='Digite Seu Email'/>
+          </div>
+            <div className="campo">
+             <label htmlFor="">Motivo De contato </label>
+                <select name="motivo" id="motivo">
+                  <option value="selecione" disabled>Selecione</option>
+                  <option value="selecione" >Contratar</option>
+                  <option value="selecione" >Selecione</option>
+                  <option value="selecione" >Selecione</option>
+                </select>
+          </div>
+            <div className="campo">
+               <label htmlFor="Mensagem"> Conte Mais sobre o Motivo De Contato*</label>
+                <textarea name="Mensagem" id="Mensagem"></textarea>
+          </div>
+          <div className="buttonForm">
+            <button>Enviar Mensagem</button>
+          </div>
+      </form>
+    </article>
+    </section>
+  </section>
+  </section>
+</main>
     </>
   )
 }
