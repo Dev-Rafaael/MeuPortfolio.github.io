@@ -314,41 +314,55 @@ display: grid;
 
 .card {
   flex: 0 0 45%;
-  padding: 20px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  height: 25rem;
+  padding: 0;
   box-sizing: border-box;
-  text-align: center;
-   background-color:rgba(15, 15, 15, 0.849);
-   border-radius: 1rem;
+  background-color:rgba(15, 15, 15, 0.405);
+  border: 1px solid rgba(97, 94, 94, 0.523);
+  border-radius: 1rem;
 }
 .card:hover{
-  transform:scale(1.1);
-     cursor: pointer;
-     border: 1px solid rgb(16, 15, 15);
+  transform:scale(1.5);
+  cursor: pointer;
+  background: linear-gradient(rgba(134, 9, 217, 0.803), rgba(24, 91, 206, 0.814));
 }
 .cardResponsivo {
   display: flex;
   gap: 1rem;
   justify-content: center;
-  align-items: end;
+  align-items: center;
   border: none;
  
 }
 
 /* Mockup notebook e celular */
 .imagensCard {
-  width: 72%;
+  width: 100%;
+  height: 12rem;
+  
 }
 .imagem {
   width: 100%;
+  height: 100%;
+ border-radius: 1rem 1rem 0 0;
+}
 
+.contentProject{
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin: 0 auto;
 }
 .card h5{
-  font-size: 1.1rem;
+  margin: 1rem 0 0.5rem;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
 .card p{
+  color: rgb(218, 213, 213);
   line-height: 1.2rem;
+  margin:  0 0 0.5rem;
 }
 .tecUsadas{
   display: flex;
@@ -361,6 +375,7 @@ justify-content: center;
 }
 /* BOTAO NET */
 .card button{
+  position: relative;
   padding: 0.9rem 1.7rem;
   margin-top: 1.2rem;
   border: 1px solid transparent;

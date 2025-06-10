@@ -26,7 +26,12 @@ import quadrado from './assets/quadrados.mp4';
 // import galaxia1 from './assets/galaxia1.mp4';
 // import galaxia2 from './assets/galaxia2.mp4';
 // import galaxia3 from './assets/galaxia3.mp4';
-
+import jaguar from './assets/IMG/jaguar.jpg';
+import mustang from './assets/IMG/mustang.jpg';
+import f1 from './assets/IMG/f1.jpg';
+import amg from './assets/IMG/amg.jpg';
+import bronco from './assets/IMG/bronco.jpg';
+import porsche from './assets/IMG/911.jpg';
 import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -121,94 +126,127 @@ function App() {
     <div className="card" data-aos="fade-right" data-aos-delay="200">
       <article className="cardResponsivo">
         <div className="imagensCard">
-          <img src={Apple} className="imagem" alt="Notebook" />
+          <img src={amg} className="imagem" alt="Notebook" />
           </div>
       </article>
-      <h5>Apple</h5>
-      <p>Clone da página de vendas do iPhone.</p>
+      <article className='contentProject'>
+      <h5>Autosystem Linx</h5>
+      <p>I am the main frontend in this project, building
+         from scratch
+         the architecture of an ERP full of complex modules.</p>
       <ul className="tecUsadas">
         <li><img src={html} alt="HTML" /></li>
         <li><img src={css} alt="CSS" /></li>
         <li><img src={javascript} alt="JavaScript" /></li>
       </ul>
-      <button><a href="https://dev-rafaael.github.io/VendasIPhone.github.io/" target="_blank">Ver Projeto</a></button>
-    </div>
+      </article>
+      {/* <button><a href="https://dev-rafaael.github.io/VendasIPhone.github.io/" target="_blank">Ver Projeto</a></button>
+   */} </div> 
 
     {/* Card Projeto */}
     <div className="card" data-aos="fade-left" data-aos-delay="200">
       <article className="cardResponsivo">
         <div className="imagensCard">
-          <img src={Pizza} className="imagem" alt="Notebook" />
+          <img src={jaguar} className="imagem" alt="Notebook" />
            </div>
       </article>
-      <h5>La Pizza</h5>
-      <p>Landing Page de uma Pizzaria.</p>
+       <article className='contentProject'>
+      <h5>Npi Consultoria</h5>
+      <p>I am the main frontend in this project, building
+         from scratch the architecture of an ERP full of
+        complex modules</p>
       <ul className="tecUsadas">
         <li><img src={html} alt="HTML" /></li>
         <li><img src={css} alt="CSS" /></li>
+        <li><img src={javascript} alt="JavaScript" /></li>
       </ul>
-      <button><a href="https://dev-rafaael.github.io/PizzariaLaPizza.github.io/" target="_blank">Ver Projeto</a></button>
-    </div>
+      </article>
+      {/* <button><a href="https://dev-rafaael.github.io/PizzariaLaPizza.github.io/" target="_blank">Ver Projeto</a></button>
+   */} </div> 
 
     {/* Card Projeto */}
  <div className="card" data-aos="fade-right" data-aos-delay="200">
       <article className="cardResponsivo">
         <div className="imagensCard">
-          <img src={Casa} className="imagem" alt="Notebook" />
+          <img src={bronco} className="imagem" alt="Notebook" />
         </div>
 
       </article>
+      <article className='contentProject'>
       <h5>DecoreHome</h5>
-      <p>Landing Page de evento de decoração de interiores.</p>
+      <p>I created a fullstack application using Next.js 
+        with APi Routes, mongodb, firebase, built
+         a CMS from scratch and several advanced features.</p>
       <ul className="tecUsadas">
         <li><img src={html} alt="HTML" /></li>
         <li><img src={css} alt="CSS" /></li>
+        <li><img src={javascript} alt="JavaScript" /></li>
       </ul>
-      <button><a href="https://dev-rafaael.github.io/DecoreHome.github.io/" target="_blank">Ver Projeto</a></button>
+      {/* <button><a href="https://dev-rafaael.github.io/DecoreHome.github.io/" target="_blank">Ver Projeto</a></button>
+    */}
+      </article>
+      
     </div>
  {/* Card Projeto */}
     <div className="card" data-aos="fade-left" data-aos-delay="200">
       <article className="cardResponsivo">
         <div className="imagensCard">
-          <img src={Casa} className="imagem" alt="Notebook" />
+          <img src={f1} className="imagem" alt="Notebook" />
         </div>
 
       </article>
+      <article className='contentProject'>
       <h5>DecoreHome</h5>
-      <p>Landing Page de evento de decoração de interiores.</p>
+        <p>I have worked on several features in
+           the netshoes core team, currently mostly in
+            performance engineering.</p>
       <ul className="tecUsadas">
         <li><img src={html} alt="HTML" /></li>
         <li><img src={css} alt="CSS" /></li>
+        <li><img src={javascript} alt="JavaScript" /></li>
       </ul>
-      <button><a href="https://dev-rafaael.github.io/DecoreHome.github.io/" target="_blank">Ver Projeto</a></button>
+      </article>
+      {/* <button><a href="https://dev-rafaael.github.io/DecoreHome.github.io/" target="_blank">Ver Projeto</a></button> */}
+    
     </div>
      <div className="card" data-aos="fade-left" data-aos-delay="200">
       <article className="cardResponsivo">
         <div className="imagensCard">
-          <img src={Pizza} className="imagem" alt="Notebook" />
+          <img src={mustang} className="imagem" alt="Notebook" />
            </div>
       </article>
+      <article className='contentProject'>
       <h5>La Pizza</h5>
-      <p>Landing Page de uma Pizzaria.</p>
+       <p>I have worked on several features in
+           the netshoes core team, currently mostly in
+            performance engineering.</p>
       <ul className="tecUsadas">
         <li><img src={html} alt="HTML" /></li>
         <li><img src={css} alt="CSS" /></li>
+        <li><img src={javascript} alt="JavaScript" /></li>
       </ul>
-      <button><a href="https://dev-rafaael.github.io/PizzariaLaPizza.github.io/" target="_blank">Ver Projeto</a></button>
+      </article>
+      {/* <button><a href="https://dev-rafaael.github.io/PizzariaLaPizza.github.io/" target="_blank">Ver Projeto</a></button> */}
     </div>
      <div className="card" data-aos="fade-left" data-aos-delay="200">
       <article className="cardResponsivo">
         <div className="imagensCard">
-          <img src={Pizza} className="imagem" alt="Notebook" />
+          <img src={porsche} className="imagem" alt="Notebook" />
            </div>
       </article>
+      <article className='contentProject'>
       <h5>La Pizza</h5>
-      <p>Landing Page de uma Pizzaria.</p>
+  <p>I have worked on several features in
+           the netshoes core team, currently mostly in
+            performance engineering.</p>
       <ul className="tecUsadas">
         <li><img src={html} alt="HTML" /></li>
         <li><img src={css} alt="CSS" /></li>
+        <li><img src={javascript} alt="JavaScript" /></li>
       </ul>
-      <button><a href="https://dev-rafaael.github.io/PizzariaLaPizza.github.io/" target="_blank">Ver Projeto</a></button>
+        {/* <button><a href="https://dev-rafaael.github.io/PizzariaLaPizza.github.io/" target="_blank">Ver Projeto</a></button> */}
+    
+      </article>
     </div>
   </article>
   
