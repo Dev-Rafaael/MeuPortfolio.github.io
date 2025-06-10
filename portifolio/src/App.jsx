@@ -298,8 +298,8 @@ function App() {
     <article className='listaMotivos'>
     <ul>
       <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eos maxime placeat!</li>
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eos maxime placeat!</li>
-              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eos maxime placeat!</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eos maxime placeat!</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eos maxime placeat!</li>
     </ul>
     </article>
     <article className='meioContato'>

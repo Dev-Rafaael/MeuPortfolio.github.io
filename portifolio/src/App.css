@@ -46,7 +46,7 @@ html{
 }
 
 .title-wrapper h2 {
-  font-size: 2.5rem;
+  font-size: 3.4rem;
   color: white;
   margin: 0;
 text-align: center;
@@ -289,13 +289,15 @@ line-height: 1.8rem;
 /* PROJETOS */
 .projetos{
   width: 100%;
-  margin: 0 auto ;
+  margin: 0rem auto ;
   height: auto;
-  padding: 2.4rem 0;
+  padding: 6rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+   border-top: 1px solid rgba(70, 69, 67, 0.347);
+  border-bottom: 1px solid rgba(70, 69, 67, 0.347);
 }
 .subtitle p{
   text-align: center;
@@ -387,12 +389,15 @@ justify-content: center;
   background-color: transparent;
 
 }
+
 /* HABILIDADES */
 .habilidadesContent{
- width: 80%;
+ width: 100%;
 height:100%;
 margin: 0 auto ;
+padding-bottom: 5rem;
 cursor: pointer;
+  border-bottom: 1px solid rgba(70, 69, 67, 0.347);
 }
 .articleHabilidades{
   height:80%;
@@ -430,6 +435,7 @@ border-radius: 1rem;
   padding-bottom: 3rem;
   display: flex;
   gap: 2rem;
+  
 }
 .contentContato{
   width: 50%;
