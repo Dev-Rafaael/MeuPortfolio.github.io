@@ -32,6 +32,13 @@ import f1 from './assets/IMG/f1.jpg';
 import amg from './assets/IMG/amg.jpg';
 import bronco from './assets/IMG/bronco.jpg';
 import porsche from './assets/IMG/911.jpg';
+import profile from './assets/IMG/profile.jpg';
+import completo from './assets/IMG/completo.png';
+
+import code from './assets/IMG/code.png';
+import exemplo1 from './assets/IMG/exemplo1.png';
+import exemplo29 from './assets/IMG/exemplo29.png';
+import programando from './assets/IMG/programando.png';
 import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -72,7 +79,7 @@ function App() {
   animate={{ y: [0, -10, 0] }}
   transition={{ repeat: Infinity, duration: 1 }}
 >
-          <p> <img src={seta} alt="seta Para Baixo"/></p>
+          <p className='arrowDown'>  <img src={seta} alt="seta Para Baixo"/></p>
           </motion.div>
          <article class="quote-box" data-aos="fade-left" data-aos-delay="800">
   <h3>Clean Code, Clear Purpose.</h3>
@@ -95,17 +102,19 @@ function App() {
      
     <article className="listaSobre" data-aos="fade-right" data-aos-delay="400">
     <ul className='listaContent'>
-        <li>💻 Desenvolvedor Web com paixão por tecnologia e inovação 🚀</li>
-        <li>📍 Localizado em São Paulo, Brasil 🇧🇷</li>
-        <li>🎓 Graduado em Análise e Desenvolvimento de Sistemas pela Anhanguera Educacional</li>
-        <li>📚 Pós-graduando em Inteligência Artificial e Ciência de Dados pela Universidade Anhembi Morumbi 🤖📊</li>
-        <li>🧠 Participante ativo de diversos cursos de Desenvolvimento Web na plataforma Udemy 💡</li>
-      </ul>
+      <p>Sou Desenvolvedor Full Stack, apaixonado por tecnologia e inovação. Localizado em São Paulo, tenho como propósito criar soluções digitais que sejam modernas, eficientes e impactem positivamente a vida das pessoas.
+
+Sou graduado em Análise e Desenvolvimento de Sistemas pela Anhanguera Educacional e atualmente curso uma pós-graduação em Inteligência Artificial e Ciência de Dados pela Universidade Anhembi Morumbi. Também estou sempre em busca de evolução contínua, participando de diversos cursos e formações na área de Desenvolvimento Web, especialmente na Udemy.
+
+Atuo com tecnologias como React.js no front-end e Laravel (PHP) com MySQL no back-end, sempre com foco em desenvolver aplicações escaláveis, bem estruturadas e com ótima performance. Me preocupo com a experiência do usuário, a responsividade das interfaces e a qualidade do código — buscando sempre aplicar boas práticas, Clean Code, versionamento com Git e metodologias ágeis.
+
+Meu objetivo é construir sistemas que façam a diferença, com código limpo, arquitetura sólida e que estejam prontos para crescer junto com o projeto. Estou sempre aprendendo, testando novas ideias e contribuindo para soluções mais inteligentes e funcionais.</p>
+    </ul>
   <div className="btnSobreMim">
      <button ><a href="#contato">Leia mais aqui</a></button>
      </div>
      </article>
-      <img src={MinhaFoto} data-aos="fade-left" data-aos-delay="400"/>
+      <img src={completo} data-aos="fade-left" data-aos-delay="400"/>
   </article>
  
 </section>
