@@ -4,9 +4,13 @@ import Apple from './assets/IMG/Apple.png';
 import Pizza from './assets/IMG/Pizza.png';
 import Casa from './assets/IMG/Casa.png';
 import MinhaFoto from './assets/IMG/MinhaFoto.jpg';
-import Linkedin from './assets/IMG/linkedin.png';
+import LinkedinTop from './assets/IMG/linkedinTop.png';
 import Whatsapp from './assets/IMG/whatsapp.png';
+import linkedin from './assets/IMG/linkedin.png';
 import github from './assets/IMG/github.png';
+import zap from './assets/IMG/zap.png';
+
+import gitHubTop from './assets/IMG/githubTop.png';
 import css from './assets/IMG/css.png';
 import express from './assets/IMG/express.png';
 import figma from './assets/IMG/figma.png';
@@ -35,10 +39,6 @@ import porsche from './assets/IMG/911.jpg';
 import profile from './assets/IMG/profile.jpg';
 import completo from './assets/IMG/completo.png';
 
-import code from './assets/IMG/code.png';
-import exemplo1 from './assets/IMG/exemplo1.png';
-import exemplo29 from './assets/IMG/exemplo29.png';
-import programando from './assets/IMG/programando.png';
 import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -71,9 +71,9 @@ function App() {
         <span data-aos="fade-up" data-aos-delay="200">Olá! Sou o</span>
       <h1 className="nome" data-aos="fade-down" data-aos-delay="200">Rafael Moraes</h1>
        <article className="logos" data-aos="fade-down" data-aos-delay="200">
-          <a href="https://www.linkedin.com/in/rafael-moraes-13ba5b258/" target="_blank"><img src={Linkedin} alt="logo Linkedin"/></a>
+          <a href="https://www.linkedin.com/in/rafael-moraes-13ba5b258/" target="_blank"><img src={LinkedinTop} alt="logo Linkedin"/></a>
           <a href="tel:+5511916658824"><img src={Whatsapp} alt="logo telefone"/></a>
-          <a href="#"><img src={github} alt="logo email"/></a>
+          <a href="#"><img src={gitHubTop} alt="logo email"/></a>
           </article>
           <motion.div
   animate={{ y: [0, -10, 0] }}
@@ -101,17 +101,25 @@ function App() {
       <article className="contentSobre">
      
     <article className="listaSobre" data-aos="fade-right" data-aos-delay="400">
-    <ul className='listaContent'>
-      <p>Sou Desenvolvedor Full Stack, apaixonado por tecnologia e inovação. Localizado em São Paulo, tenho como propósito criar soluções digitais que sejam modernas, eficientes e impactem positivamente a vida das pessoas.
-
-Sou graduado em Análise e Desenvolvimento de Sistemas pela Anhanguera Educacional e atualmente curso uma pós-graduação em Inteligência Artificial e Ciência de Dados pela Universidade Anhembi Morumbi. Também estou sempre em busca de evolução contínua, participando de diversos cursos e formações na área de Desenvolvimento Web, especialmente na Udemy.
-
-Atuo com tecnologias como React.js no front-end e Laravel (PHP) com MySQL no back-end, sempre com foco em desenvolver aplicações escaláveis, bem estruturadas e com ótima performance. Me preocupo com a experiência do usuário, a responsividade das interfaces e a qualidade do código — buscando sempre aplicar boas práticas, Clean Code, versionamento com Git e metodologias ágeis.
-
-Meu objetivo é construir sistemas que façam a diferença, com código limpo, arquitetura sólida e que estejam prontos para crescer junto com o projeto. Estou sempre aprendendo, testando novas ideias e contribuindo para soluções mais inteligentes e funcionais.</p>
-    </ul>
+    <div className='listaContent'>
+      <p>
+        Sou Desenvolvedor Full Stack com foco em criar soluções web modernas, escaláveis e de 
+        alta performance. Trabalho com React.js no front-end e Laravel (PHP) com MySQL no 
+        back-end, sempre buscando entregar interfaces bem construídas e sistemas eficientes.
+      </p>
+       <p>
+      Sou formado em Análise e Desenvolvimento de Sistemas pela Anhanguera e pós-graduando em
+       Inteligência Artificial e Ciência de Dados pela Anhembi Morumbi. Além disso, 
+      mantenho o aprendizado constante por meio de cursos voltados ao desenvolvimento web.
+      </p>
+      <p>
+        Tenho como prioridade escrever código limpo, aplicar boas práticas e garantir a melhor 
+        experiência para o usuário. Estou sempre em busca de evolução e de novos desafios que
+         me façam crescer como profissional e como pessoa.
+      </p>
+    </div>
   <div className="btnSobreMim">
-     <button ><a href="#contato">Leia mais aqui</a></button>
+     <button ><a href="#contato">Dowload CV</a></button>
      </div>
      </article>
       <img src={completo} data-aos="fade-left" data-aos-delay="400"/>
@@ -263,10 +271,10 @@ Meu objetivo é construir sistemas que façam a diferença, com código limpo, a
 
 <section class="habilidadesContent" >
    <div class="title-wrapper" data-aos="fade-right" data-aos-delay="400">
-      <h2>Habilidades</h2>
+      <h2>Habilidades e Tecnologias</h2>
     </div>
     <div className="subtitle" data-aos="fade-left" data-aos-delay="400">
-     <p>Tecnologias e ferramentas que domino e utilizo nos meus projetos</p>
+     <p>Habilidades e Tecnologias que domino e utilizo nos meus projetos</p>
   </div>
   <article className='articleHabilidades' data-aos="fade-down" data-aos-delay="400">
   <div className="listas">
@@ -299,28 +307,13 @@ Meu objetivo é construir sistemas que façam a diferença, com código limpo, a
 </section>
 
   <section className='contato'>
-    <article className='contentContato'>
- <div class="title-wrapper" data-aos="fade-right" data-aos-delay="400">
-      <h2>Entre em contato</h2>
-      <div class="line"></div>
-    </div>
-    <article className='listaMotivos'>
-    <ul>
-      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eos maxime placeat!</li>
-      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eos maxime placeat!</li>
-      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eos maxime placeat!</li>
-    </ul>
-    </article>
-    <article className='meioContato'>
-      <ul>
-        <li>Whatsapp: +55 1191665-8824</li>
-        <li>Linkedin:<link rel="stylesheet" href="linkedin.com/in/rafael-moraes-13ba5b258/" /></li>
-         <li>Github: <link rel="stylesheet" href="https://dev-rafaael.github.io/" /></li>
-      </ul>
-      </article>
-    </article>
     <article className='formularioContato'>
+      <div className="contentform">
       <form >
+        <div className="titulosForm">
+        <h2> 💡 Conte-me sobre seu projeto</h2>
+      <p>Quanto mais detalhes, melhor posso ajudar você!</p>
+         </div>
           <div className="campo">
              <label htmlFor="">Como Posso te Chamar *</label>
                 <input type="text" placeholder='Digite Seu Nome' />           
@@ -346,7 +339,43 @@ Meu objetivo é construir sistemas que façam a diferença, com código limpo, a
             <button>Enviar Mensagem</button>
           </div>
       </form>
+      </div>
     </article>
+    <article className='contentContato'>
+ <div class="title-wrapper" data-aos="fade-right" data-aos-delay="400">
+    </div>
+    <article className='apresentacao'>
+    <div>
+     <div className="fotoApresentacao">
+      <img src={MinhaFoto} alt="Minha foto" />
+     </div>
+     {/* <div className="conteudoApresentacao">
+         <h2>Entre em contato</h2>
+     </div> */}
+     </div>
+        <article className='meioContato'>
+          <ul>
+            <li className='whastsappIcon'><img src={zap} alt="zap" /> <a href="https://wa.me/5511916658824" target="_blank">
+            <li>
+                Whastsapp</li>
+            <li> Para Contato Profissional</li>
+          
+          </a></li>
+            <li className='linkedinIcon'><img src={linkedin} alt="zap" /> <a href="https://linkedin.com/in/rafael-moraes-13ba5b258/" target="_blank"><ul>
+              <li>
+                linkedin</li>
+                <li>para Conexoes Profissionais</li></ul></a></li>
+            <li className='gitHubIcon'><img src={github} alt="zap" /> <a href="https://github.com/Dev-Rafaael" target="_blank">
+            <li>
+                Git Hub</li>
+                <li> Para Conhecimento Profissional</li>
+          </a></li>
+        </ul>
+      </article>
+    </article>
+ 
+    </article>
+    
     </section>
   </section>
   </section>
