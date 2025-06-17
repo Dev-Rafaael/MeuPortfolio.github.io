@@ -96,11 +96,15 @@ font-weight: 800;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(rgba(69, 68, 68, 0.836), rgba(50, 49, 49, 0.912));
+  background: transparent;
   border: 1px solid  #e7e6e955;
+   backdrop-filter: blur(10px); /* efeito de desfoque */
+  -webkit-backdrop-filter: blur(10px); /* Safari */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); /* sombra */
   border-radius: 1.5rem;
 z-index: 999;
  cursor: pointer;
+
 }
 .logo p{
   display: flex;
@@ -108,6 +112,8 @@ z-index: 999;
   justify-content: center;
   gap: 0.5rem;
   font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
 }
 .logo img{
   width: 2rem;
@@ -164,9 +170,12 @@ z-index: 999;
 .articleVideo span{
   height: 1rem;
   font-size: 1.1rem ;
+  font-weight: 600;
   text-align: start;
-  width: 29%;
- 
+  width: 34.5%;
+   background: linear-gradient(90deg,rgb(129, 29, 195), rgb(0, 94, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .quote-box {
   position: relative;
@@ -187,6 +196,9 @@ z-index: 999;
   position: absolute;
   top: 0;
   left: 16px;
+   background: linear-gradient(90deg,rgb(129, 29, 195), rgb(0, 94, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .quote-box h3 {
@@ -198,15 +210,19 @@ z-index: 999;
   text-align: right;
   font-size: 14px;
   margin-top: 20px;
-
+ background: linear-gradient(90deg,rgb(129, 29, 195), rgb(0, 94, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .nome{
-    font-family: "Londrina Outline", sans-serif;
-  font-weight: 400;
+   font-family: "Anton SC", sans-serif;
   font-style: normal;
   font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
 }
+
 .logos {
   display: flex;
   gap: 1rem;
@@ -222,6 +238,7 @@ z-index: 999;
 }
 .arrowDown{
   cursor: pointer;
+  
 }
 
 .content{
@@ -255,12 +272,21 @@ z-index: 999;
   align-items: center;
   justify-content: center;
 }
-.titleSobreMim h2 {
-  font-size: 2.6rem;
-  color: white;
-  margin: 0;
-  font-weight: bold;
+
+.titleSobreMim h2{
+  width: 25%;
+  margin: 0 auto;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 800;
+  line-height: 3rem;
 }
+.titleSobreMim span{
+  background: linear-gradient(90deg,rgb(129, 29, 195), rgb(0, 94, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .titleSobreMim p {
   color: rgb(218, 213, 213);
   font-size: 1.1rem;
@@ -343,6 +369,18 @@ line-height: 1.8rem;
    border-top: 1px solid rgba(70, 69, 67, 0.347);
   border-bottom: 1px solid rgba(70, 69, 67, 0.347);
 }
+.titleProjetos h2{
+  width: 100%;
+  margin: 0 auto 0.5rem ;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 800;
+  line-height: 4rem;
+    background: linear-gradient(90deg,rgb(129, 29, 195), rgb(0, 94, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
 .subtitle p{
   text-align: center;
   font-size: 1.2rem;
@@ -452,6 +490,20 @@ align-items: center;
 justify-content: center;
 border-radius: 1rem;
 }
+.titleTecnologia h2{
+  width: 40%;
+  margin: 0 auto 1rem;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 800;
+  line-height: 3rem;
+}
+.titleTecnologia span{
+  background: linear-gradient(90deg,rgb(129, 29, 195), rgb(0, 94, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .listas ul{
   display: flex;
   align-items: center;

@@ -60,7 +60,7 @@ function App() {
         <section className='contentMain'>
           <nav className='navbar'>
             <article className='logo'>
-             <p> <img  src={profile} alt="minha Logo" /> Rafael </p>
+             <p> <img  src={profile} alt="minha Logo" />Rafael </p>
             </article>
 
             <article className='barra'>
@@ -90,16 +90,14 @@ function App() {
                   <a href="tel:+5511916658824"><img src={Whatsapp} alt="logo telefone" /></a>
                   <a href="#"><img src={gitHubTop} alt="logo email" /></a>
                 </article>
+              
                 <motion.div
                   animate={{ y: [0, -10, 0] }}
                   transition={{ repeat: Infinity, duration: 1 }}
                 >
                   <p className='arrowDown'>  <img src={seta} alt="seta Para Baixo" /></p>
                 </motion.div>
-                <article class="quote-box" data-aos="fade-left" data-aos-delay="800">
-                  <h3>Clean Code, Clear Purpose.</h3>
-                  <p>— Chat GPT</p>
-                </article>
+                
 
               </article>
 
@@ -109,7 +107,7 @@ function App() {
           <section className='content'>
             <section className="sobreMim" id="sobreMim" >
               <div class="titleSobreMim" data-aos="fade-right" data-aos-delay="400">
-                <h2>Quem eu sou?</h2>
+                <h2>Quem <span>eu sou?</span> </h2>
                 <p>Sou um Desenvolvedor Front-end e Full Stack, especializado na criação de interfaces web, desenvolvimento de sistemas e aplicações modernas. Trabalho com tecnologias como React.js, Laravel (PHP) e MySQL, sempre buscando construir soluções dinâmicas, escaláveis e de alta performance.
                 </p>
               </div>
@@ -146,7 +144,7 @@ function App() {
     <h2>Projetos</h2>
   <p>Uma seleção dos meus melhores trabalhos e projetos recentes</p>
   </div> */}
-              <div className="title-wrapper" data-aos="fade-right" data-aos-delay="400" >
+              <div className="titleProjetos" data-aos="fade-right" data-aos-delay="400" >
                 <h2>Projetos</h2>
               </div>
               <div className="subtitle" data-aos="fade-left" data-aos-delay="400">
@@ -285,11 +283,11 @@ function App() {
             </section>
 
             <section class="habilidadesContent" >
-              <div class="title-wrapper" data-aos="fade-right" data-aos-delay="400">
-                <h2>Habilidades e Tecnologias</h2>
+              <div class="titleTecnologia" data-aos="fade-right" data-aos-delay="400">
+                <h2> Tecnologias e <span>Ferramentas</span></h2>
               </div>
               <div className="subtitle" data-aos="fade-left" data-aos-delay="400">
-                <p>Habilidades e Tecnologias que domino e utilizo nos meus projetos</p>
+                <p> Tecnologias e Ferramentas que domino e utilizo nos meus projetos</p>
               </div>
               <article className='articleHabilidades' data-aos="fade-down" data-aos-delay="400">
                 <div className="listas">
@@ -302,7 +300,7 @@ function App() {
                     <li>  <img src={css} alt="CSS" /></li>
                     <li>  <img src={node} alt="Node JS" /></li>
                   </ul>
-                  <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, quisquam ad exercitationem facilis sit id, earum natus magnam iusto voluptates placeat fugiat voluptatum itaque doloremque totam amet molestias a assumenda.</span>
+                  {/* <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, quisquam ad exercitationem facilis sit id, earum natus magnam iusto voluptates placeat fugiat voluptatum itaque doloremque totam amet molestias a assumenda.</span> */}
                 </div>
                 <div className="listas">
                   <ul>
@@ -315,7 +313,7 @@ function App() {
                     <li>  <img src={figma} alt="Figma" /></li>
 
                   </ul>
-                  <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, quisquam ad exercitationem facilis sit id, earum natus magnam iusto voluptates placeat fugiat voluptatum itaque doloremque totam amet molestias a assumenda.</span>
+                  {/* <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, quisquam ad exercitationem facilis sit id, earum natus magnam iusto voluptates placeat fugiat voluptatum itaque doloremque totam amet molestias a assumenda.</span> */}
 
                 </div>
               </article>
