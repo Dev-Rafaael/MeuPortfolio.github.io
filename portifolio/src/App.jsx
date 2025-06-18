@@ -37,7 +37,7 @@ import bronco from './assets/IMG/bronco.jpg';
 import porsche from './assets/IMG/911.jpg';
 import profile from './assets/IMG/RmBlueSea.png';
 import completo from './assets/IMG/completo.png';
-
+import logoTransparente from './assets/IMG/logoTransparente.png'
 import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -85,6 +85,7 @@ function App() {
               <article className="articleVideo">
                 <span data-aos="fade-up" data-aos-delay="200">Olá! Sou o</span>
                 <h1 className="nome" data-aos="fade-down" data-aos-delay="200">Rafael Moraes</h1>
+            
                 <article className="logos" data-aos="fade-down" data-aos-delay="200">
                   <a href="https://www.linkedin.com/in/rafael-moraes-13ba5b258/" target="_blank"><img src={LinkedinTop} alt="logo Linkedin" /></a>
                   <a href="tel:+5511916658824"><img src={Whatsapp} alt="logo telefone" /></a>
@@ -139,7 +140,7 @@ function App() {
               </article>
 
             </section>
-            <section className="projetos" id="projetos">
+            <section className="sectionProjetos" id="sectionProjetos">
               {/* <div className="titleProjetos">
     <h2>Projetos</h2>
   <p>Uma seleção dos meus melhores trabalhos e projetos recentes</p>
@@ -150,16 +151,18 @@ function App() {
               <div className="subtitle" data-aos="fade-left" data-aos-delay="400">
                 <p>Uma seleção dos meus melhores trabalhos e projetos recentes</p>
               </div>
-              <article className="content-projetos">
+              <article className="contentProjetos">
 
                 {/* Card Projeto */}
                 <div className="card" data-aos="fade-right" data-aos-delay="200">
                   <article className="cardResponsivo">
                     <div className="imagensCard">
                       <img src={amg} className="imagem" alt="Notebook" />
+                      <button><a href="https://dev-rafaael.github.io/VendasIPhone.github.io/" target="_blank">Ver Projeto</a></button>
+  
                     </div>
                   </article>
-                  <article className='contentProject'>
+                  <article className='projeto'>
                     <h5>Autosystem Linx</h5>
                     <p>I am the main frontend in this project, building
                       from scratch
@@ -170,17 +173,17 @@ function App() {
                       <li><img src={javascript} alt="JavaScript" /></li>
                     </ul>
                   </article>
-                  {/* <button><a href="https://dev-rafaael.github.io/VendasIPhone.github.io/" target="_blank">Ver Projeto</a></button>
-   */} </div>
+            </div>
 
-                {/* Card Projeto */}
+                {/* Card Projeto */}  
                 <div className="card" data-aos="fade-left" data-aos-delay="200">
                   <article className="cardResponsivo">
                     <div className="imagensCard">
                       <img src={jaguar} className="imagem" alt="Notebook" />
+                       <button><a href="https://dev-rafaael.github.io/PizzariaLaPizza.github.io/" target="_blank">Ver Projeto</a></button>
                     </div>
                   </article>
-                  <article className='contentProject'>
+                  <article className='projeto'>
                     <h5>Npi Consultoria</h5>
                     <p>I am the main frontend in this project, building
                       from scratch the architecture of an ERP full of
@@ -191,18 +194,19 @@ function App() {
                       <li><img src={javascript} alt="JavaScript" /></li>
                     </ul>
                   </article>
-                  {/* <button><a href="https://dev-rafaael.github.io/PizzariaLaPizza.github.io/" target="_blank">Ver Projeto</a></button>
-   */} </div>
+              </div>
 
                 {/* Card Projeto */}
                 <div className="card" data-aos="fade-right" data-aos-delay="200">
                   <article className="cardResponsivo">
                     <div className="imagensCard">
                       <img src={bronco} className="imagem" alt="Notebook" />
+                      <button><a href="https://dev-rafaael.github.io/DecoreHome.github.io/" target="_blank">Ver Projeto</a></button>
+    
                     </div>
 
                   </article>
-                  <article className='contentProject'>
+                  <article className='projeto'>
                     <h5>DecoreHome</h5>
                     <p>I created a fullstack application using Next.js
                       with APi Routes, mongodb, firebase, built
@@ -212,8 +216,7 @@ function App() {
                       <li><img src={css} alt="CSS" /></li>
                       <li><img src={javascript} alt="JavaScript" /></li>
                     </ul>
-                    {/* <button><a href="https://dev-rafaael.github.io/DecoreHome.github.io/" target="_blank">Ver Projeto</a></button>
-    */}
+      
                   </article>
 
                 </div>
@@ -222,10 +225,12 @@ function App() {
                   <article className="cardResponsivo">
                     <div className="imagensCard">
                       <img src={f1} className="imagem" alt="Notebook" />
+                      <button><a href="https://dev-rafaael.github.io/DecoreHome.github.io/" target="_blank">Ver Projeto</a></button>
+
                     </div>
 
                   </article>
-                  <article className='contentProject'>
+                  <article className='projeto'>
                     <h5>DecoreHome</h5>
                     <p>I have worked on several features in
                       the netshoes core team, currently mostly in
@@ -236,35 +241,38 @@ function App() {
                       <li><img src={javascript} alt="JavaScript" /></li>
                     </ul>
                   </article>
-                  {/* <button><a href="https://dev-rafaael.github.io/DecoreHome.github.io/" target="_blank">Ver Projeto</a></button> */}
-
+               
                 </div>
                 <div className="card" data-aos="fade-left" data-aos-delay="200">
                   <article className="cardResponsivo">
                     <div className="imagensCard">
                       <img src={mustang} className="imagem" alt="Notebook" />
+                      <button><a href="https://dev-rafaael.github.io/PizzariaLaPizza.github.io/" target="_blank">Ver Projeto</a></button>
+               
                     </div>
                   </article>
-                  <article className='contentProject'>
+                  <article className='projeto'>
                     <h5>La Pizza</h5>
                     <p>I have worked on several features in
                       the netshoes core team, currently mostly in
                       performance engineering.</p>
+               
                     <ul className="tecUsadas">
                       <li><img src={html} alt="HTML" /></li>
                       <li><img src={css} alt="CSS" /></li>
                       <li><img src={javascript} alt="JavaScript" /></li>
                     </ul>
                   </article>
-                  {/* <button><a href="https://dev-rafaael.github.io/PizzariaLaPizza.github.io/" target="_blank">Ver Projeto</a></button> */}
-                </div>
+                 </div>
                 <div className="card" data-aos="fade-left" data-aos-delay="200">
                   <article className="cardResponsivo">
                     <div className="imagensCard">
                       <img src={porsche} className="imagem" alt="Notebook" />
+                      <button><a href="https://dev-rafaael.github.io/PizzariaLaPizza.github.io/" target="_blank">Ver Projeto</a></button>
+
                     </div>
                   </article>
-                  <article className='contentProject'>
+                  <article className='projeto'>
                     <h5>La Pizza</h5>
                     <p>I have worked on several features in
                       the netshoes core team, currently mostly in
@@ -274,8 +282,7 @@ function App() {
                       <li><img src={css} alt="CSS" /></li>
                       <li><img src={javascript} alt="JavaScript" /></li>
                     </ul>
-                    {/* <button><a href="https://dev-rafaael.github.io/PizzariaLaPizza.github.io/" target="_blank">Ver Projeto</a></button> */}
-
+                  
                   </article>
                 </div>
               </article>
@@ -329,6 +336,7 @@ function App() {
                   <div className="contentform">
                     <form >
                       <div className="titulosForm">
+                     
                         <h2> 💡<span> Conecte-se Comigo</span></h2>
                         <p>Quanto mais detalhes, melhor posso ajudar você!</p>
                       </div>
