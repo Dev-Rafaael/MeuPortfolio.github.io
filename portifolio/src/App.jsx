@@ -37,8 +37,7 @@ import bronco from './assets/IMG/bronco.jpg';
 import porsche from './assets/IMG/911.jpg';
 import profile from './assets/IMG/RmBlueSea.png';
 import completo from './assets/IMG/completo.png';
-import logoTransparente from './assets/IMG/logoTransparente.png'
-import { motion } from 'framer-motion';
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
@@ -91,15 +90,7 @@ function App() {
                   <a href="tel:+5511916658824"><img src={Whatsapp} alt="logo telefone" /></a>
                   <a href="#"><img src={gitHubTop} alt="logo email" /></a>
                 </article>
-              
-                <motion.div
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ repeat: Infinity, duration: 1 }}
-                >
                   <p className='arrowDown'>  <img src={seta} alt="seta Para Baixo" /></p>
-                </motion.div>
-                
-
               </article>
 
             </section>
