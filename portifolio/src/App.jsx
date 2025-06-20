@@ -102,7 +102,7 @@ function App() {
                 <h1 className={modoEscuro ? "nome" : "nomeWhite"} >Rafael Moraes</h1>
             
                 <article className="logos" data-aos="fade-down" data-aos-delay="200">
-                  <a href="https://www.linkedin.com/in/rafael-moraes-13ba5b258/" target="_blank">
+                  <a href="https://www.linkedin.com/in/rafaaelmoraes/" target="_blank">
                   <img
                 className="icone-tema"
                 src={Linkedin}
@@ -114,7 +114,7 @@ function App() {
                 alt={'Logo Whatsapp ' }
               />
               </a>
-                  <a href="#"><img
+                  <a href="https://github.com/Dev-Rafaael"><img
                 className="icone-tema"
                 src={Github}
                 alt={'Logo Github'}
@@ -401,7 +401,7 @@ function App() {
                       </a>
                       </li>
 
-                      <li className='linkedinIcon'><img src={Linkedin} alt="zap" /> <a href="https://linkedin.com/in/rafael-moraes-13ba5b258/" target="_blank">
+                      <li className='linkedinIcon'><img src={Linkedin} alt="zap" /> <a href="https://www.linkedin.com/in/rafaaelmoraes/" target="_blank">
                         <p>linkedin</p>
                         <span>para Conexoes Profissionais</span>
                       </a>
