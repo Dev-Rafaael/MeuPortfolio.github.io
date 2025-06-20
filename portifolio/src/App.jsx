@@ -40,30 +40,38 @@ import completo from './assets/IMG/completo.png';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 function App() {
+  const [modoEscuro, setModoEscuro]= useState(true);
+
+  const darkMode = () => {
+    setModoEscuro(true)
+  }
+ const WhiteMode = () => {
+    setModoEscuro(false)
+  }
   useEffect(() => {
     AOS.init();
   }, []);
   return (
     <>
-      <main className="videoSection">
+        <main className={modoEscuro ? "videoSection" : "videoSectionWhite"}>
 
         <video autoPlay loop muted playsInline >
           <source src={quadrado} type="video/mp4" />
           Seu navegador não suporta o elemento de vídeo.
         </video>
 
-        <div className="overlayGradient"></div>
+        <div className={modoEscuro ? "overlayGradient" : "overlayGradientWhite"}></div>
 
-        <section className='contentMain'>
-          <nav className='navbar'>
+        <section className={ modoEscuro ?'contentMain' :'contentMainWhite'}>
+          <nav className={ modoEscuro ?'navbar' :'navbarWhite'}>
             <article className='logo'>
              <p> <img  src={profile} alt="minha Logo" />Rafael </p>
             </article>
 
-            <article className='barra'>
-              <ul className='listaBarra'>
+            <article className={modoEscuro ? "barra" : "barraWhite"}>
+              <ul className= {modoEscuro ? "listaBarra" : "listaBarraWhite"}>
                  <li>Home</li>
                 <li>Sobre Mim</li>
                 <li>Projetos</li>
@@ -72,9 +80,13 @@ function App() {
               </ul>
             </article>
 
-            <article className="estiloBackground">
-              <img src={sol} alt="Claro" />
-              <img src={lua} alt="Escuro" />
+            <article className= {modoEscuro ? "estiloBackground" : "estiloBackgroundWhite"}>
+              <img
+                className="icone-tema"
+                onClick={modoEscuro ? WhiteMode : darkMode}
+                src={modoEscuro ? sol : lua}
+                alt={modoEscuro ? 'Claro' : 'Escuro'}
+              />{/* <img  className= {modoEscuro ? "DarkMode" : "WhiteMode"} onClick={darkMode} src={lua} alt="Escuro" /> */}
             </article>
           </nav>
           <section>
@@ -83,7 +95,7 @@ function App() {
 
               <article className="articleVideo">
                 <span data-aos="fade-up" data-aos-delay="200">Olá! Sou o</span>
-                <h1 className="nome" data-aos="fade-down" data-aos-delay="200">Rafael Moraes</h1>
+                <h1 className={modoEscuro ? "nome" : "nomeWhite"} >Rafael Moraes</h1>
             
                 <article className="logos" data-aos="fade-down" data-aos-delay="200">
                   <a href="https://www.linkedin.com/in/rafael-moraes-13ba5b258/" target="_blank"><img src={LinkedinTop} alt="logo Linkedin" /></a>
@@ -96,17 +108,17 @@ function App() {
             </section>
           </section>
 
-          <section className='content'>
-            <section className="sobreMim" id="sobreMim" >
-              <div class="titleSobreMim" data-aos="fade-right" data-aos-delay="400">
+          <section className={modoEscuro ? "content" : "contentWhite"}>
+            <section className= {modoEscuro ? "sobreMim" : "sobreMimWhite"} id="sobreMim" >
+              <div className={modoEscuro ? "titleSobreMim" : "titleSobreMimWhite"} data-aos="fade-right" data-aos-delay="400">
                 <h2>Quem <span>eu sou?</span> </h2>
                 <p>Sou um Desenvolvedor Front-end e Full Stack, especializado na criação de interfaces web, desenvolvimento de sistemas e aplicações modernas. Trabalho com tecnologias como React.js, Laravel (PHP) e MySQL, sempre buscando construir soluções dinâmicas, escaláveis e de alta performance.
                 </p>
               </div>
-              <article className="contentSobre">
+              <article className= {modoEscuro ? "contentSobre" : "contentSobreWhite"}> 
 
-                <article className="listaSobre" data-aos="fade-right" data-aos-delay="400">
-                  <div className='listaContent'>
+                <article className={modoEscuro ? "listaSobre" : "listaSobreWhite"} data-aos="fade-right" data-aos-delay="400">
+                  <div className={modoEscuro ? "listaContent" : "listaContentWhite"}>
                     <p>
                       Sou Desenvolvedor Full Stack com foco em criar soluções web modernas, escaláveis e de
                       alta performance. Trabalho com React.js no front-end e Laravel (PHP) com MySQL no
@@ -123,7 +135,7 @@ function App() {
                       me façam crescer como profissional e como pessoa.
                     </p>
                   </div>
-                  <div className="btnSobreMim">
+                  <div className= {modoEscuro ? "btnSobreMim" : "btnSobreMimWhite"}>
                     <button ><a href="#contato">Dowload CV</a></button>
                   </div>
                 </article>
@@ -131,34 +143,34 @@ function App() {
               </article>
 
             </section>
-            <section className="sectionProjetos" id="sectionProjetos">
+            <section className={modoEscuro ? "sectionProjetos" : "sectionProjetosWhite"} id="sectionProjetos">
               {/* <div className="titleProjetos">
     <h2>Projetos</h2>
   <p>Uma seleção dos meus melhores trabalhos e projetos recentes</p>
   </div> */}
-              <div className="titleProjetos" data-aos="fade-right" data-aos-delay="400" >
+              <div className={modoEscuro ? "titleProjetos" : "titleProjetosWhite"} data-aos="fade-right" data-aos-delay="400" >
                 <h2>Projetos</h2>
               </div>
-              <div className="subtitle" data-aos="fade-left" data-aos-delay="400">
+              <div className={modoEscuro ? "subtitle" : "subtitleWhite"} data-aos="fade-left" data-aos-delay="400">
                 <p>Uma seleção dos meus melhores trabalhos e projetos recentes</p>
               </div>
-              <article className="contentProjetos">
+              <article className={modoEscuro ? "contentProjetos" : "contentProjetosWhite"}>
 
                 {/* Card Projeto */}
-                <div className="card" data-aos="fade-right" data-aos-delay="200">
-                  <article className="cardResponsivo">
-                    <div className="imagensCard">
+                <div className={modoEscuro ? "cardSobre" : "cardWhite"} data-aos="fade-right" data-aos-delay="200">
+                  <article className={modoEscuro ? "cardResponsivo" : "cardResponsivoWhite"}>
+                    <div className={modoEscuro ? "imagensCard" : "imagensCardWhite"}>
                       <img src={amg} className="imagem" alt="Notebook" />
                       <button><a href="https://dev-rafaael.github.io/VendasIPhone.github.io/" target="_blank">Ver Projeto</a></button>
   
                     </div>
                   </article>
-                  <article className='projeto'>
+                  <article className= {modoEscuro ? "projeto" : "projetoWhite"}>
                     <h5>Autosystem Linx</h5>
                     <p>I am the main frontend in this project, building
                       from scratch
                       the architecture of an ERP full of complex modules.</p>
-                    <ul className="tecUsadas">
+                    <ul className={modoEscuro ? "tecUsadas" : "tecUsadasWhite"}>
                       <li><img src={html} alt="HTML" /></li>
                       <li><img src={css} alt="CSS" /></li>
                       <li><img src={javascript} alt="JavaScript" /></li>
@@ -167,19 +179,19 @@ function App() {
             </div>
 
                 {/* Card Projeto */}  
-                <div className="card" data-aos="fade-left" data-aos-delay="200">
-                  <article className="cardResponsivo">
-                    <div className="imagensCard">
+                <div className={modoEscuro ? "card" : "cardWhite"}  data-aos="fade-left" data-aos-delay="200">
+                  <article className={modoEscuro ? "cardResponsivo" : "cardResponsivoWhite"}>
+                    <div className={modoEscuro ? "imagensCard" : "imagensCardWhite"}>
                       <img src={jaguar} className="imagem" alt="Notebook" />
                        <button><a href="https://dev-rafaael.github.io/PizzariaLaPizza.github.io/" target="_blank">Ver Projeto</a></button>
                     </div>
                   </article>
-                  <article className='projeto'>
+                  <article className= {modoEscuro ? "projeto" : "projetoWhite"}>
                     <h5>Npi Consultoria</h5>
                     <p>I am the main frontend in this project, building
                       from scratch the architecture of an ERP full of
                       complex modules</p>
-                    <ul className="tecUsadas">
+                    <ul className={modoEscuro ? "tecUsadas" : "tecUsadasWhite"}>
                       <li><img src={html} alt="HTML" /></li>
                       <li><img src={css} alt="CSS" /></li>
                       <li><img src={javascript} alt="JavaScript" /></li>
@@ -188,21 +200,21 @@ function App() {
               </div>
 
                 {/* Card Projeto */}
-                <div className="card" data-aos="fade-right" data-aos-delay="200">
-                  <article className="cardResponsivo">
-                    <div className="imagensCard">
+                <div className={modoEscuro ? "card" : "cardWhite"} data-aos="fade-right" data-aos-delay="200">
+                  <article  className={modoEscuro ? "cardResponsivo" : "cardResponsivoWhite"}>
+                    <div className={modoEscuro ? "imagensCard" : "imagensCardWhite"}>
                       <img src={bronco} className="imagem" alt="Notebook" />
                       <button><a href="https://dev-rafaael.github.io/DecoreHome.github.io/" target="_blank">Ver Projeto</a></button>
     
                     </div>
 
                   </article>
-                  <article className='projeto'>
+                  <article className= {modoEscuro ? "projeto" : "projetoWhite"}>
                     <h5>DecoreHome</h5>
                     <p>I created a fullstack application using Next.js
                       with APi Routes, mongodb, firebase, built
                       a CMS from scratch and several advanced features.</p>
-                    <ul className="tecUsadas">
+                    <ul className={modoEscuro ? "tecUsadas" : "tecUsadasWhite"}>
                       <li><img src={html} alt="HTML" /></li>
                       <li><img src={css} alt="CSS" /></li>
                       <li><img src={javascript} alt="JavaScript" /></li>
@@ -212,21 +224,21 @@ function App() {
 
                 </div>
                 {/* Card Projeto */}
-                <div className="card" data-aos="fade-left" data-aos-delay="200">
-                  <article className="cardResponsivo">
-                    <div className="imagensCard">
+                <div className={modoEscuro ? "card" : "cardWhite"} data-aos="fade-left" data-aos-delay="200">
+                  <article  className={modoEscuro ? "cardResponsivo" : "cardResponsivoWhite"}>
+                    <div className={modoEscuro ? "imagensCard" : "imagensCardWhite"}>
                       <img src={f1} className="imagem" alt="Notebook" />
                       <button><a href="https://dev-rafaael.github.io/DecoreHome.github.io/" target="_blank">Ver Projeto</a></button>
 
                     </div>
 
                   </article>
-                  <article className='projeto'>
+                  <article className= {modoEscuro ? "projeto" : "projetoWhite"}>
                     <h5>DecoreHome</h5>
                     <p>I have worked on several features in
                       the netshoes core team, currently mostly in
                       performance engineering.</p>
-                    <ul className="tecUsadas">
+                    <ul className={modoEscuro ? "tecUsadas" : "tecUsadasWhite"}>
                       <li><img src={html} alt="HTML" /></li>
                       <li><img src={css} alt="CSS" /></li>
                       <li><img src={javascript} alt="JavaScript" /></li>
@@ -234,41 +246,41 @@ function App() {
                   </article>
                
                 </div>
-                <div className="card" data-aos="fade-left" data-aos-delay="200">
-                  <article className="cardResponsivo">
-                    <div className="imagensCard">
+                <div className={modoEscuro ? "card" : "cardWhite"} data-aos="fade-left" data-aos-delay="200">
+                  <article className={modoEscuro ? "cardResponsivo" : "cardResponsivoWhite"}>
+                    <div className={modoEscuro ? "imagensCard" : "imagensCardWhite"}>
                       <img src={mustang} className="imagem" alt="Notebook" />
                       <button><a href="https://dev-rafaael.github.io/PizzariaLaPizza.github.io/" target="_blank">Ver Projeto</a></button>
                
                     </div>
                   </article>
-                  <article className='projeto'>
+                  <article className= {modoEscuro ? "projeto" : "projetoWhite"}>
                     <h5>La Pizza</h5>
                     <p>I have worked on several features in
                       the netshoes core team, currently mostly in
                       performance engineering.</p>
                
-                    <ul className="tecUsadas">
+                    <ul className={modoEscuro ? "tecUsadas" : "tecUsadasWhite"}>
                       <li><img src={html} alt="HTML" /></li>
                       <li><img src={css} alt="CSS" /></li>
                       <li><img src={javascript} alt="JavaScript" /></li>
                     </ul>
                   </article>
                  </div>
-                <div className="card" data-aos="fade-left" data-aos-delay="200">
-                  <article className="cardResponsivo">
-                    <div className="imagensCard">
+                <div className={modoEscuro ? "card" : "cardWhite"} data-aos="fade-left" data-aos-delay="200">
+                  <article  className={modoEscuro ? "cardResponsivo" : "cardResponsivoWhite"}>
+                    <div className={modoEscuro ? "imagensCard" : "imagensCardWhite"}>
                       <img src={porsche} className="imagem" alt="Notebook" />
                       <button><a href="https://dev-rafaael.github.io/PizzariaLaPizza.github.io/" target="_blank">Ver Projeto</a></button>
 
                     </div>
                   </article>
-                  <article className='projeto'>
+                  <article className= {modoEscuro ? "projeto" : "projetoWhite"}>
                     <h5>La Pizza</h5>
                     <p>I have worked on several features in
                       the netshoes core team, currently mostly in
                       performance engineering.</p>
-                    <ul className="tecUsadas">
+                    <ul className={modoEscuro ? "tecUsadas" : "tecUsadasWhite"}>
                       <li><img src={html} alt="HTML" /></li>
                       <li><img src={css} alt="CSS" /></li>
                       <li><img src={javascript} alt="JavaScript" /></li>
@@ -280,15 +292,15 @@ function App() {
 
             </section>
 
-            <section class="habilidadesContent" >
-              <div class="titleTecnologia" data-aos="fade-right" data-aos-delay="400">
+            <section className= {modoEscuro ? "habilidadesContent" : "habilidadesContentWhite"} >
+              <div className={modoEscuro ? "titleTecnologia" : "titleTecnologiaWhite"} data-aos="fade-right" data-aos-delay="400">
                 <h2> Tecnologias e <span>Ferramentas</span></h2>
               </div>
-              <div className="subtitle" data-aos="fade-left" data-aos-delay="400">
+              <div className={modoEscuro ? "subtitle" : "subtitleWhite"} data-aos="fade-left" data-aos-delay="400">
                 <p> Tecnologias e Ferramentas que domino e utilizo nos meus projetos</p>
               </div>
-              <article className='articleHabilidades' data-aos="fade-down" data-aos-delay="400">
-                <div className="listas">
+              <article className={modoEscuro ? "articleHabilidades" : "articleHabilidadesWhite"} data-aos="fade-down" data-aos-delay="400">
+                <div className={modoEscuro ? "listas" : "listasWhite"}>
                   <ul>
 
                     <li>  <img src={react} alt="React JS" /></li>
@@ -300,7 +312,7 @@ function App() {
                   </ul>
                   {/* <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, quisquam ad exercitationem facilis sit id, earum natus magnam iusto voluptates placeat fugiat voluptatum itaque doloremque totam amet molestias a assumenda.</span> */}
                 </div>
-                <div className="listas">
+                <div className={modoEscuro ? "listas" : "listasWhite"}>
                   <ul>
 
                     <li>  <img src={express} alt="Express JS" /></li>
@@ -317,29 +329,29 @@ function App() {
               </article>
             </section>
 
-            <section className='sectionContato'>
-              <article className="titleContato">
+            <section className= {modoEscuro ? "sectionContato" : "sectionContatoWhite"}>
+              <article className={modoEscuro ? "titleContato" : "titleContatoWhite"}>
                 <h2>Vamos <span>Conversar?</span></h2>
                 <p>Pronto para criar experiências digitais incríveis? Vamos discutir seu projeto e transformar suas ideias em realidade.</p>
               </article>
-              <div className="contato">
-                <article className='formularioContato'>
-                  <div className="contentform">
+              <div className={modoEscuro ? "contato" : "contatoWhite"}>
+                <article className={modoEscuro ? "formularioContato" : "formularioContatoWhite"}>
+                  <div className={modoEscuro ? "contentform" : "contentformWhite"}>
                     <form >
-                      <div className="titulosForm">
+                      <div className= {modoEscuro ? "titulosForm" : "titulosFormWhite"}>
                      
                         <h2> 💡<span> Conecte-se Comigo</span></h2>
                         <p>Quanto mais detalhes, melhor posso ajudar você!</p>
                       </div>
-                      <div className="campo">
+                      <div className={modoEscuro ? "campo" : "campoWhite"}>
                         <label htmlFor="">Como Posso te Chamar *</label>
                         <input type="text" placeholder='Digite Seu Nome' />
                       </div>
-                      <div className="campo">
+                      <div className={modoEscuro ? "campo" : "campoWhite"}>
                         <label htmlFor=""> Seu Melhor Email *</label>
                         <input type="email" placeholder='Digite Seu Email' />
                       </div>
-                      <div className="campo">
+                     <div className={modoEscuro ? "campo" : "campoWhite"}>
                         <label htmlFor="">Motivo De contato </label>
                         <select name="motivo" id="motivo">
                           <option value="selecione" disabled>Selecione</option>
@@ -348,19 +360,19 @@ function App() {
                           <option value="selecione" >Selecione</option>
                         </select>
                       </div>
-                      <div className="campo">
+                      <div className={modoEscuro ? "campo" : "campoWhite"}>
                         <label htmlFor="Mensagem"> Conte Mais sobre o Motivo De Contato*</label>
                         <textarea name="Mensagem" id="Mensagem"></textarea>
                       </div>
-                      <div className="buttonForm">
+                      <div className= {modoEscuro ? "buttonForm" : "buttonFormWhite"}>
                         <button>Enviar Mensagem</button>
                       </div>
                     </form>
                   </div>
                 </article>
-                <section className='contentContato'>
-                  <article className='meioContato'>
-                    <div className="conteudoApresentacao">
+                <section className={modoEscuro ? "contentContato" : "contentContatoWhite"}>
+                  <article className= {modoEscuro ? "meioContato" : "meioContatoWhite"}>
+                    <div className={modoEscuro ? "conteudoApresentacao" : "conteudoApresentacaoWhite"}>
                       <h2>🔗 <span>Outras Formas de Contato </span> </h2>
                     </div>
                     <ul>
