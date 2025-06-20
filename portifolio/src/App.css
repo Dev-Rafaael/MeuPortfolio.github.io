@@ -219,6 +219,9 @@ background: linear-gradient(90deg,rgb(129, 29, 195), rgb(0, 94, 255));
    animation: bounce 1.5s infinite;
   
 }
+.arrowDown img{
+ width: 1.4rem;
+}
 
 .content{
   background-color: rgba(0, 0, 0, 0.327);
@@ -751,12 +754,12 @@ z-index: 999;
 }
 .listaBarraWhite li{
   font-size: 0.9rem;
-  color: rgb(31, 30, 30);
+  color: rgb(248, 245, 245);
   opacity: 0.9;
 }
 .listaBarraWhite li:hover{
   opacity: 1;
-  color: rgb(65, 64, 64);
+  color: rgb(206, 203, 203);
 }
 
 .estiloBackgroundWhite{
@@ -778,10 +781,28 @@ background: linear-gradient(90deg,rgb(129, 29, 195), rgb(0, 94, 255));
   padding: 0.4rem;
  border-radius: 50%;
 }
-.videoSectionWhite video {
-  display: none;
 
+.videoSectionWhite {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.videoSectionWhite video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover; 
+  z-index: 0; 
+}
+
 .overlayGradientWhite {
     position: absolute;
   top: 0;
@@ -789,7 +810,7 @@ background: linear-gradient(90deg,rgb(129, 29, 195), rgb(0, 94, 255));
   width: 100%;
   height: 100%;
   z-index: 1; 
-  background: linear-gradient(rgb(255, 255, 255), rgba(250, 250, 250, 0.933));
+  /* background: linear-gradient(rgba(243, 241, 241, 0.249), rgba(250, 250, 250, 0.201)); */
 }
 .nomeWhite {
   line-height: 100%;
@@ -808,9 +829,11 @@ background: linear-gradient(90deg,rgb(129, 29, 195), rgb(0, 94, 255));
   gap: 2rem;
   height: 100%;
   z-index: 999;
-   background-color: rgba(255, 255, 255, 0.944);
+   /* background-color: rgba(134, 130, 130, 0.892); */
 }
-
+.contentWhite{
+  background-color: rgba(205, 200, 200, 0.519); 
+}
 /* SOBRE MIM */
 
 .sobreMimWhite{

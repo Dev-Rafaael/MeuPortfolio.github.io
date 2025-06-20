@@ -1,15 +1,12 @@
 
 import './App.css'
-import Apple from './assets/IMG/Apple.png';
-import Pizza from './assets/IMG/Pizza.png';
-import Casa from './assets/IMG/Casa.png';
-import MinhaFoto from './assets/IMG/MinhaFoto.jpg';
-import LinkedinTop from './assets/IMG/linkedinTop.png';
+import videoBackgroundWhite from './assets/videoBackgroundWhite.mp4';
+import videoBackground from './assets/videoBackground.mp4';
+import arrow from './assets/IMG/arrow.png';
+import arrowBlack from './assets/IMG/arrowBlack.png';
 import Whatsapp from './assets/IMG/whatsapp.png';
-import linkedin from './assets/IMG/linkedin.png';
-import github from './assets/IMG/github.png';
-import zap from './assets/IMG/zap.png';
-import gitHubTop from './assets/IMG/githubTop.png';
+import Linkedin from './assets/IMG/linkedin.png';
+import Github from './assets/IMG/github.png';
 import css from './assets/IMG/css.png';
 import express from './assets/IMG/express.png';
 import figma from './assets/IMG/figma.png';
@@ -19,16 +16,10 @@ import javascript from './assets/IMG/javascript.png';
 import node from './assets/IMG/node.png';
 import php from './assets/IMG/php.png';
 import react from './assets/IMG/react.png';
-import seta from './assets/IMG/seta.png';
 import sql from './assets/IMG/sql.png';
 import sol from './assets/IMG/sol.png';
 import lua from './assets/IMG/lua.png';
 import typescript from './assets/IMG/typescript.png';
-// import videoFile from './assets/videoBackground.mp4';
-import quadrado from './assets/quadrados.mp4';
-// import galaxia1 from './assets/galaxia1.mp4';
-// import galaxia2 from './assets/galaxia2.mp4';
-// import galaxia3 from './assets/galaxia3.mp4';
 import jaguar from './assets/IMG/jaguar.jpg';
 import mustang from './assets/IMG/mustang.jpg';
 import f1 from './assets/IMG/f1.jpg';
@@ -40,10 +31,10 @@ import completo from './assets/IMG/completo.png';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 function App() {
   const [modoEscuro, setModoEscuro]= useState(true);
-
+  const videoRef = useRef(null); // <- Referência ao vídeo
   const darkMode = () => {
     setModoEscuro(true)
   }
@@ -53,12 +44,25 @@ function App() {
   useEffect(() => {
     AOS.init();
   }, []);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.load(); // <- Força o reload do vídeo ao trocar o tema
+    }
+  }, [modoEscuro]);
   return (
     <>
         <main className={modoEscuro ? "videoSection" : "videoSectionWhite"}>
 
-        <video autoPlay loop muted playsInline >
-          <source src={quadrado} type="video/mp4" />
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="video-background"
+        >
+          <source src={modoEscuro ? videoBackground : videoBackgroundWhite} type="video/mp4" />
           Seu navegador não suporta o elemento de vídeo.
         </video>
 
@@ -86,7 +90,7 @@ function App() {
                 onClick={modoEscuro ? WhiteMode : darkMode}
                 src={modoEscuro ? sol : lua}
                 alt={modoEscuro ? 'Claro' : 'Escuro'}
-              />{/* <img  className= {modoEscuro ? "DarkMode" : "WhiteMode"} onClick={darkMode} src={lua} alt="Escuro" /> */}
+              />
             </article>
           </nav>
           <section>
@@ -98,11 +102,26 @@ function App() {
                 <h1 className={modoEscuro ? "nome" : "nomeWhite"} >Rafael Moraes</h1>
             
                 <article className="logos" data-aos="fade-down" data-aos-delay="200">
-                  <a href="https://www.linkedin.com/in/rafael-moraes-13ba5b258/" target="_blank"><img src={LinkedinTop} alt="logo Linkedin" /></a>
-                  <a href="tel:+5511916658824"><img src={Whatsapp} alt="logo telefone" /></a>
-                  <a href="#"><img src={gitHubTop} alt="logo email" /></a>
+                  <a href="https://www.linkedin.com/in/rafael-moraes-13ba5b258/" target="_blank">
+                  <img
+                className="icone-tema"
+                src={Linkedin}
+                alt={'Logo Linkedin Claro'}
+              /></a>
+                  <a href="tel:+5511916658824"> <img
+                className="icone-tema"
+                src={Whatsapp}
+                alt={'Logo Whatsapp ' }
+              />
+              </a>
+                  <a href="#"><img
+                className="icone-tema"
+                src={Github}
+                alt={'Logo Github'}
+              />
+              </a>
                 </article>
-                  <p className='arrowDown'>  <img src={seta} alt="seta Para Baixo" /></p>
+                  <p className='arrowDown'>  <img src={modoEscuro ?arrow : arrowBlack} alt="seta Para Baixo" /></p>
               </article>
 
             </section>
@@ -157,7 +176,7 @@ function App() {
               <article className={modoEscuro ? "contentProjetos" : "contentProjetosWhite"}>
 
                 {/* Card Projeto */}
-                <div className={modoEscuro ? "cardSobre" : "cardWhite"} data-aos="fade-right" data-aos-delay="200">
+                <div className={modoEscuro ? "card" : "cardWhite"} data-aos="fade-right" data-aos-delay="200">
                   <article className={modoEscuro ? "cardResponsivo" : "cardResponsivoWhite"}>
                     <div className={modoEscuro ? "imagensCard" : "imagensCardWhite"}>
                       <img src={amg} className="imagem" alt="Notebook" />
@@ -376,19 +395,19 @@ function App() {
                       <h2>🔗 <span>Outras Formas de Contato </span> </h2>
                     </div>
                     <ul>
-                      <li className='whastsappIcon'><img src={zap} alt="zap" /> <a href="https://wa.me/5511916658824" target="_blank">
+                      <li className='whastsappIcon'><img src={Whatsapp} alt="zap" /> <a href="https://wa.me/5511916658824" target="_blank">
                         <p>Whastsapp</p>
                         <span> Para Contato Profissional</span>
                       </a>
                       </li>
 
-                      <li className='linkedinIcon'><img src={linkedin} alt="zap" /> <a href="https://linkedin.com/in/rafael-moraes-13ba5b258/" target="_blank">
+                      <li className='linkedinIcon'><img src={Linkedin} alt="zap" /> <a href="https://linkedin.com/in/rafael-moraes-13ba5b258/" target="_blank">
                         <p>linkedin</p>
                         <span>para Conexoes Profissionais</span>
                       </a>
                       </li>
 
-                      <li className='gitHubIcon'><img src={github} alt="zap" /> <a href="https://github.com/Dev-Rafaael" target="_blank">
+                      <li className='gitHubIcon'><img src={Github} alt="zap" /> <a href="https://github.com/Dev-Rafaael" target="_blank">
                         <p>Git Hub</p>
                         <span> Para Conhecimento Profissional</span>
                       </a>
