@@ -28,7 +28,7 @@ import bronco from './assets/IMG/bronco.jpg';
 import porsche from './assets/IMG/911.jpg';
 import profile from './assets/IMG/RmBlueSea.png';
 import completo from './assets/IMG/completo.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import iconPessoal from './assets/IconPessoal.gif';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -105,12 +105,10 @@ function App() {
 
               <section className="articleVideo">
                 <article className='infoPessoal'>
-                <span data-aos="fade-up" data-aos-delay="200">Olá! Sou o</span>
-                
-                <h1 className={modoEscuro ? "nome" : "nomeWhite"} >Rafael Moraes</h1>
-                <FontAwesomeIcon icon="fa-regular fa-laptop-code" style={{color: "#8609d9",}} />
-            </article>
-                <article className="logos" data-aos="fade-down" data-aos-delay="200">
+                  <div className="dadosInfo">
+                 <h4>Construo experiências digitais que <span>encantam na interface </span>  e funcionam com solidez por trás dos bastidores.</h4>
+                  <p>Do layout ao banco de dados, transformo ideias em aplicações modernas, rápidas e alinhadas com os objetivos do seu negócio.</p>
+                  <article className="logos" data-aos="fade-down" data-aos-delay="200">
                   <a href="https://www.linkedin.com/in/rafaaelmoraes/" target="_blank">
                   <img
                 className="icone-tema"
@@ -130,6 +128,13 @@ function App() {
               />
               </a>
                 </article>
+                </div>
+                <div className="iconInfo">
+                  <img src={iconPessoal} alt="" />
+                </div>
+                
+             </article>
+              
                   <p className='arrowDown' onClick={navegando}>  <img src={modoEscuro ?arrow : arrowBlack} alt="seta Para Baixo" /></p>
               </section>
 

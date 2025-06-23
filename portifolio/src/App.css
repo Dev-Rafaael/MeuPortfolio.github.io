@@ -152,19 +152,45 @@ background: linear-gradient(90deg,rgb(129, 29, 195), rgb(0, 94, 255));
   z-index: 2; 
 }
 
- .articleVideo span{
-  height: 1rem;
-  font-size: 1.1rem ;
-  font-weight: 600;
-  text-align: start;
-  width: 32%;
-   background: linear-gradient(90deg,rgb(129, 29, 195), rgb(0, 94, 255));
+ 
+.infoPessoal{
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+.dadosInfo{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 3.5rem;
+}
+.dadosInfo h4{
+  color: white;
+  font-size: 2.5rem;
+  line-height: 2.4rem;
+  
+}
+.dadosInfo span{
+       background: linear-gradient(90deg,rgb(129, 29, 195), rgb(0, 94, 255));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 8px #a855f780;
 }
+.dadosInfo p{
+  color: rgb(218, 213, 213);
+  font-size: 1.1rem;
 
-.nome {
+line-height: 1.4rem;
+}
+.iconInfo{
+  width: 30%;
+}
+.iconInfo img{
+  width: 25rem;
+}
+/* .nome {
   line-height: 100%;
   padding: 0.5rem 0 1rem;
   font-family: 'Anton', sans-serif;
@@ -176,12 +202,13 @@ background: linear-gradient(90deg,rgb(129, 29, 195), rgb(0, 94, 255));
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.1),
    0 -1px 1px rgba(0, 0, 0, 0.2),
    2px 2px 4px rgba(255, 255, 255, 0.2);
-}
+} */
 .logos {
   display: flex;
   gap: 1rem;
   margin-bottom: 1.3rem;
 }
+
 .logos img{
   width: 2rem;
   z-index: 999;
