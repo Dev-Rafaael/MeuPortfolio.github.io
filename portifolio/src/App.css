@@ -629,6 +629,7 @@ textarea{
   border: none;
   border-radius: 0.8rem;
  resize: none;
+  font-size: 1rem;
 }
 .buttonForm{
    width: 80%;
@@ -1223,18 +1224,11 @@ border-radius: 1rem;
   font-size: 1rem;
    border: none;
 }
+
 .campoWhite select option{
   background-color: rgb(65, 65, 67);
 }
-textarea{
-  height: 8rem;
-  padding: 1rem;
-  color: rgb(255, 255, 255);
-   background-color: #8d889244;
-  border: none;
-  border-radius: 0.8rem;
- resize: none;
-}
+
 .buttonFormWhite{
    width: 80%;
     margin: 1rem auto;

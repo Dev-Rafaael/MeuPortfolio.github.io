@@ -28,6 +28,7 @@ import bronco from './assets/IMG/bronco.jpg';
 import porsche from './assets/IMG/911.jpg';
 import profile from './assets/IMG/RmBlueSea.png';
 import completo from './assets/IMG/completo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -50,6 +51,11 @@ function App() {
       videoRef.current.load(); // <- Força o reload do vídeo ao trocar o tema
     }
   }, [modoEscuro]);
+
+  const navegando = () => {
+    document.querySelector("#sobreMim").scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
         <main className={modoEscuro ? "videoSection" : "videoSectionWhite"}>
@@ -97,10 +103,13 @@ function App() {
 
             <section >
 
-              <article className="articleVideo">
+              <section className="articleVideo">
+                <article className='infoPessoal'>
                 <span data-aos="fade-up" data-aos-delay="200">Olá! Sou o</span>
+                
                 <h1 className={modoEscuro ? "nome" : "nomeWhite"} >Rafael Moraes</h1>
-            
+                <FontAwesomeIcon icon="fa-regular fa-laptop-code" style={{color: "#8609d9",}} />
+            </article>
                 <article className="logos" data-aos="fade-down" data-aos-delay="200">
                   <a href="https://www.linkedin.com/in/rafaaelmoraes/" target="_blank">
                   <img
@@ -121,8 +130,8 @@ function App() {
               />
               </a>
                 </article>
-                  <p className='arrowDown'>  <img src={modoEscuro ?arrow : arrowBlack} alt="seta Para Baixo" /></p>
-              </article>
+                  <p className='arrowDown' onClick={navegando}>  <img src={modoEscuro ?arrow : arrowBlack} alt="seta Para Baixo" /></p>
+              </section>
 
             </section>
           </section>
@@ -372,12 +381,14 @@ function App() {
                       </div>
                      <div className={modoEscuro ? "campo" : "campoWhite"}>
                         <label htmlFor="">Motivo De contato </label>
-                        <select name="motivo" id="motivo">
-                          <option value="selecione" disabled>Selecione</option>
-                          <option value="selecione" >Contratar</option>
-                          <option value="selecione" >Selecione</option>
-                          <option value="selecione" >Selecione</option>
-                        </select>
+                        <select name="motivo" id="motivo" required>
+                        <option value="" disabled selected>Selecione um motivo</option>
+                        <option value="freelance">Solicitar Projeto Freelance</option>
+                        <option value="vaga">Oferta de Vaga de Emprego</option>
+                        <option value="duvida">Tirar uma Dúvida Técnica</option>
+                        <option value="parceria">Propor Parceria</option>
+                        <option value="outro">Outro</option>
+                      </select>
                       </div>
                       <div className={modoEscuro ? "campo" : "campoWhite"}>
                         <label htmlFor="Mensagem"> Conte Mais sobre o Motivo De Contato*</label>
