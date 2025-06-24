@@ -28,11 +28,11 @@ import bronco from './assets/IMG/bronco.jpg';
 import porsche from './assets/IMG/911.jpg';
 import profile from './assets/IMG/RmBlueSea.png';
 import completo from './assets/IMG/completo.png';
-import iconPessoal from './assets/IconPessoal.gif';
-
+import iconPessoal from './assets/IconPessoal.gif'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect, useState, useRef } from 'react';
+import { TypeAnimation } from 'react-type-animation';
 function App() {
   const [modoEscuro, setModoEscuro]= useState(true);
   const videoRef = useRef(null); // <- Referência ao vídeo
@@ -52,8 +52,22 @@ function App() {
     }
   }, [modoEscuro]);
 
-  const navegando = () => {
+   const Home = () => {
+    document.querySelector("#infoPessoal").scrollIntoView({ behavior: "smooth" });
+  };
+
+  const sobreMim = () => {
     document.querySelector("#sobreMim").scrollIntoView({ behavior: "smooth" });
+  };
+
+    const projetos = () => {
+    document.querySelector("#projeto").scrollIntoView({ behavior: "smooth" });
+  };
+    const tecnologias = () => {
+    document.querySelector("#tecnologia").scrollIntoView({ behavior: "smooth" });
+  };
+    const contato = () => {
+    document.querySelector("#contato").scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -82,11 +96,11 @@ function App() {
 
             <article className={modoEscuro ? "barra" : "barraWhite"}>
               <ul className= {modoEscuro ? "listaBarra" : "listaBarraWhite"}>
-                 <li>Home</li>
-                <li>Sobre Mim</li>
-                <li>Projetos</li>
-                <li>Tecnologia</li>
-                <li>Contato</li>
+                 <li onClick={Home}>Home</li>
+                <li onClick={sobreMim}>Sobre Mim</li>
+                <li onClick={projetos}>Projetos</li>
+                <li onClick={tecnologias}>Tecnologia</li>
+                <li onClick={contato}>Contato</li>
               </ul>
             </article>
 
@@ -104,30 +118,23 @@ function App() {
             <section >
 
               <section className="articleVideo">
-                <article className='infoPessoal'>
-                  <div className="dadosInfo">
+                <article className='infoPessoal' id='infoPessoal'>
+                  <div className={modoEscuro ? 'dadosInfo' : 'dadosInfoWhite'}>
                  <h4>Construo experiências digitais que <span>encantam na interface </span>  e funcionam com solidez por trás dos bastidores.</h4>
-                  <p>Do layout ao banco de dados, transformo ideias em aplicações modernas, rápidas e alinhadas com os objetivos do seu negócio.</p>
-                  <article className="logos" data-aos="fade-down" data-aos-delay="200">
-                  <a href="https://www.linkedin.com/in/rafaaelmoraes/" target="_blank">
-                  <img
-                className="icone-tema"
-                src={Linkedin}
-                alt={'Logo Linkedin Claro'}
-              /></a>
-                  <a href="tel:+5511916658824"> <img
-                className="icone-tema"
-                src={Whatsapp}
-                alt={'Logo Whatsapp ' }
+          <p >
+              <TypeAnimation
+                sequence={[
+                  "Do layout ao banco de dados, transformo ideias em aplicações modernas, rápidas e alinhadas com os objetivos do seu negócio.",
+                  2000,
+                  "",
+                ]}
+                wrapper="p"
+                speed={50}
+                style={{ fontSize: '1.1rem', display: 'inline-block' }}
+                repeat={Infinity}
               />
-              </a>
-                  <a href="https://github.com/Dev-Rafaael"><img
-                className="icone-tema"
-                src={Github}
-                alt={'Logo Github'}
-              />
-              </a>
-                </article>
+            </p>
+
                 </div>
                 <div className="iconInfo">
                   <img src={iconPessoal} alt="" />
@@ -135,7 +142,7 @@ function App() {
                 
              </article>
               
-                  <p className='arrowDown' onClick={navegando}>  <img src={modoEscuro ?arrow : arrowBlack} alt="seta Para Baixo" /></p>
+                  <p className='arrowDown' onClick={sobreMim}>  <img src={modoEscuro ?arrow : arrowBlack} alt="seta Para Baixo" /></p>
               </section>
 
             </section>
@@ -145,7 +152,9 @@ function App() {
             <section className= {modoEscuro ? "sobreMim" : "sobreMimWhite"} id="sobreMim" >
               <div className={modoEscuro ? "titleSobreMim" : "titleSobreMimWhite"} data-aos="fade-right" data-aos-delay="400">
                 <h2>Quem <span>eu sou?</span> </h2>
-                <p>Sou um Desenvolvedor Front-end e Full Stack, especializado na criação de interfaces web, desenvolvimento de sistemas e aplicações modernas. Trabalho com tecnologias como React.js, Laravel (PHP) e MySQL, sempre buscando construir soluções dinâmicas, escaláveis e de alta performance.
+                <p>Sou o <span>Rafael</span> um Desenvolvedor Front-end e Full Stack, especializado na criação de interfaces web,
+                   desenvolvimento de sistemas e aplicações modernas. Trabalho com tecnologias como React.js,
+                    Laravel (PHP) e MySQL, sempre buscando construir soluções dinâmicas, escaláveis e de alta performance.
                 </p>
               </div>
               <article className= {modoEscuro ? "contentSobre" : "contentSobreWhite"}> 
@@ -153,7 +162,7 @@ function App() {
                 <article className={modoEscuro ? "listaSobre" : "listaSobreWhite"} data-aos="fade-right" data-aos-delay="400">
                   <div className={modoEscuro ? "listaContent" : "listaContentWhite"}>
                     <p>
-                      Sou Desenvolvedor Full Stack com foco em criar soluções web modernas, escaláveis e de
+                      Me chamo <span> Rafael Moraes</span>, sou Desenvolvedor Full Stack com foco em criar soluções web modernas, escaláveis e de
                       alta performance. Trabalho com React.js no front-end e Laravel (PHP) com MySQL no
                       back-end, sempre buscando entregar interfaces bem construídas e sistemas eficientes.
                     </p>
@@ -176,11 +185,8 @@ function App() {
               </article>
 
             </section>
-            <section className={modoEscuro ? "sectionProjetos" : "sectionProjetosWhite"} id="sectionProjetos">
-              {/* <div className="titleProjetos">
-    <h2>Projetos</h2>
-  <p>Uma seleção dos meus melhores trabalhos e projetos recentes</p>
-  </div> */}
+            <section className={modoEscuro ? "sectionProjetos" : "sectionProjetosWhite"} id="projeto">
+    
               <div className={modoEscuro ? "titleProjetos" : "titleProjetosWhite"} data-aos="fade-right" data-aos-delay="400" >
                 <h2>Projetos</h2>
               </div>
@@ -316,7 +322,7 @@ function App() {
                     <ul className={modoEscuro ? "tecUsadas" : "tecUsadasWhite"}>
                       <li><img src={html} alt="HTML" /></li>
                       <li><img src={css} alt="CSS" /></li>
-                      <li><img src={javascript} alt="JavaScript" /></li>
+                      <li><img src={javascript} alt="JavaScript" id='tecnologia' /></li>
                     </ul>
                   
                   </article>
@@ -362,7 +368,7 @@ function App() {
               </article>
             </section>
 
-            <section className= {modoEscuro ? "sectionContato" : "sectionContatoWhite"}>
+            <section className= {modoEscuro ? "sectionContato" : "sectionContatoWhite"} id='contato'>
               <article className={modoEscuro ? "titleContato" : "titleContatoWhite"}>
                 <h2>Vamos <span>Conversar?</span></h2>
                 <p>Pronto para criar experiências digitais incríveis? Vamos discutir seu projeto e transformar suas ideias em realidade.</p>
