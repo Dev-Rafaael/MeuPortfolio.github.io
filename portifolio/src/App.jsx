@@ -53,7 +53,7 @@ function App() {
   }, [modoEscuro]);
 
    const Home = () => {
-    document.querySelector("#infoPessoal").scrollIntoView({ behavior: "smooth" });
+    document.querySelector("#home").scrollIntoView({ behavior: "smooth" });
   };
 
   const sobreMim = () => {
@@ -88,13 +88,13 @@ function App() {
 
         <div className={modoEscuro ? "overlayGradient" : "overlayGradientWhite"}></div>
 
-        <section className={ modoEscuro ?'contentMain' :'contentMainWhite'}>
+        <section className={ modoEscuro ?'contentMain' :'contentMainWhite'} >
           <nav className={ modoEscuro ?'navbar' :'navbarWhite'}>
             <article className='logo'>
-             <p> <img  src={profile} alt="minha Logo" />Rafael </p>
+             <p onClick={Home} > <img  src={profile} alt="minha Logo" />Rafael </p>
             </article>
 
-            <article className={modoEscuro ? "barra" : "barraWhite"}>
+            <article className={modoEscuro ? "barra" : "barraWhite"} >
               <ul className= {modoEscuro ? "listaBarra" : "listaBarraWhite"}>
                  <li onClick={Home}>Home</li>
                 <li onClick={sobreMim}>Sobre Mim</li>
@@ -104,7 +104,7 @@ function App() {
               </ul>
             </article>
 
-            <article className= {modoEscuro ? "estiloBackground" : "estiloBackgroundWhite"}>
+            <article className= {modoEscuro ? "estiloBackground" : "estiloBackgroundWhite"} >
               <img
                 className="icone-tema"
                 onClick={modoEscuro ? WhiteMode : darkMode}
@@ -117,8 +117,8 @@ function App() {
 
             <section >
 
-              <section className="articleVideo">
-                <article className='infoPessoal' id='infoPessoal'>
+              <section className="articleVideo"id='home'>
+                <article className='infoPessoal' >
                   <div className={modoEscuro ? 'dadosInfo' : 'dadosInfoWhite'}>
                  <h4>Construo experiências digitais que <span>encantam na interface </span>  e funcionam com solidez por trás dos bastidores.</h4>
           <p >
