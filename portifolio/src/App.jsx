@@ -200,12 +200,12 @@ function App() {
                   <article className={modoEscuro ? "cardResponsivo" : "cardResponsivoWhite"}>
                     <div className={modoEscuro ? "imagensCard" : "imagensCardWhite"}>
                       <img src={amg} className="imagem" alt="Notebook" />
-                      <button><a href="https://dev-rafaael.github.io/VendasIPhone.github.io/" target="_blank">Ver Projeto</a></button>
+                      <button><a href="https://github.com/Dev-Rafaael/La-Pizza" target="_blank">Ver Projeto</a></button>
   
                     </div>
                   </article>
                   <article className= {modoEscuro ? "projeto" : "projetoWhite"}>
-                    <h5>Autosystem Linx</h5>
+                    <h5>E-Commerce La Pizza</h5>
                     <p>I am the main frontend in this project, building
                       from scratch
                       the architecture of an ERP full of complex modules.</p>
